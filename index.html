@@ -16,8 +16,10 @@
       --line: #e3eaf1;
       --accent: #d9a85f;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: Inter, "Segoe UI", Arial, sans-serif;
@@ -25,84 +27,232 @@
       background: #f5f8fc;
       line-height: 1.7;
     }
+
     a { color: inherit; text-decoration: none; }
     .wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
+
     header {
-      position: sticky; top: 0; z-index: 10;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       background: rgba(255,255,255,.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
     }
-    nav { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { font-weight: 800; letter-spacing: .04em; color: var(--navy); }
-    .navlinks { display: flex; gap: 24px; color: var(--muted); font-size: .93rem; }
+
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .04em;
+      color: var(--navy);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 24px;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
     .navlinks a:hover { color: var(--blue); }
-    .hero { padding: 76px 0 64px; background: linear-gradient(135deg, #eaf2fa 0%, #f8fafc 65%, #fff 100%); }
-    .hero-grid { display: grid; grid-template-columns: 1.35fr .85fr; align-items: center; gap: 50px; }
-    .eyebrow { color: var(--blue); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; font-size: .76rem; }
-    h1 { margin: 12px 0 12px; color: var(--navy); font-size: clamp(2.5rem, 6vw, 4.7rem); line-height: 1.06; letter-spacing: -.045em; }
-    .hero p { max-width: 620px; color: var(--muted); font-size: 1.08rem; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn { display: inline-flex; padding: 11px 19px; border-radius: 999px; font-weight: 700; font-size: .92rem; transition: .2s; }
+
+    .hero {
+      padding: 76px 0 64px;
+      background: linear-gradient(135deg, #eaf2fa 0%, #f8fafc 65%, #fff 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr .85fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-size: .76rem;
+    }
+
+    h1 {
+      margin: 12px 0;
+      color: var(--navy);
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      padding: 11px 19px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .92rem;
+      transition: .2s;
+    }
+
     .btn-primary { background: var(--navy); color: white; }
     .btn-primary:hover { background: var(--blue); transform: translateY(-2px); }
     .btn-outline { border: 1px solid #b9c9d9; color: var(--navy); background: white; }
+
     .profile-card {
-      background: white; border: 1px solid var(--line); border-radius: 28px;
-      padding: 28px; box-shadow: 0 18px 50px rgba(20,43,74,.09); text-align: center;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 18px 50px rgba(20,43,74,.09);
+      text-align: center;
     }
+
+    /* Foto profil dibuat kecil dan konsisten */
     .avatar {
-      .avatar {
-        width: 120px !important;
-        height: 120px !important;
-        max-width: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-        margin: 0 auto 20px;
-        border: 6px solid var(--sky);
+      width: 120px;
+      height: 120px;
+      max-width: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin: 0 auto 20px;
+      border: 6px solid var(--sky);
     }
+
     .profile-card h2 { margin: 0; color: var(--navy); font-size: 1.35rem; }
     .profile-card p { margin: 4px 0 0; color: var(--muted); font-size: .94rem; }
+
     section { padding: 76px 0; }
-    .section-label { color: var(--blue); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-    h2.section-title { margin: 7px 0 26px; color: var(--navy); font-size: clamp(1.8rem, 4vw, 2.5rem); line-height: 1.2; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
-    .about-copy, .info-card, .interest-card, .contact-card {
-      background: white; border: 1px solid var(--line); border-radius: 20px; padding: 26px;
+
+    .section-label {
+      color: var(--blue);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
+
+    h2.section-title {
+      margin: 7px 0 26px;
+      color: var(--navy);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    /* Bagian tentang diriku */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .about-copy, .info-card, .interest-card, .contact-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 26px;
+    }
+
     .about-copy p { margin: 0; color: var(--muted); }
+
     .info-list { display: grid; gap: 15px; }
-    .info-row { display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
     .info-row:last-child { border: 0; padding-bottom: 0; }
     .info-row span:first-child { color: var(--muted); }
     .info-row strong { text-align: right; color: var(--navy); }
+
+    /* Bagian minat: tiga kolom di layar laptop/desktop */
     .interests { background: var(--sky); }
-    .interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .interest-card { padding: 24px; }
+
+    .interest-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .interest-card {
+      padding: 24px;
+      min-width: 0;
+    }
+
     .interest-icon { font-size: 1.7rem; }
     .interest-card h3 { margin: 12px 0 6px; color: var(--navy); }
     .interest-card p { margin: 0; color: var(--muted); font-size: .94rem; }
-    .contact-card { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; }
+
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
     .contact-card p { color: var(--muted); margin: 5px 0 0; }
     .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
-    footer { padding: 25px 0; background: var(--navy); color: #dce7f2; text-align: center; font-size: .88rem; }
+
+    footer {
+      padding: 25px 0;
+      background: var(--navy);
+      color: #dce7f2;
+      text-align: center;
+      font-size: .88rem;
+    }
+
     footer p { margin: 0; }
+
     @media (max-width: 760px) {
       .navlinks { gap: 12px; font-size: .82rem; }
       .hero { padding: 54px 0; }
       .hero-grid, .about-grid { grid-template-columns: 1fr; gap: 28px; }
       .profile-card { max-width: 390px; width: 100%; margin: auto; }
       section { padding: 58px 0; }
-      .interest-grid { grid-template-columns: 1fr; }
+      .interest-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
+
     @media (max-width: 430px) {
       .wrap { width: min(100% - 28px, 1080px); }
-      nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 13px 0; gap: 6px; }
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 13px 0;
+        gap: 6px;
+      }
       .navlinks { width: 100%; justify-content: space-between; }
       .info-row { flex-direction: column; gap: 2px; }
       .info-row strong { text-align: left; }
+      .interest-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -130,15 +280,13 @@
             <a class="btn btn-outline" href="#contact">Hubungi</a>
           </div>
         </div>
+
         <aside class="profile-card">
           <img
             src="WhatsApp Image 2026-11-12 at 10.44.14.jpeg"
             alt="Foto Profil Tutur Mukminin"
             class="avatar"
-             style="width:120px; height:120px; max-width:120px;
-            object-fit:cover; border-radius:50%;
-            display:block; margin:0 auto 20px;"
->
+          >
           <h2>Tutur Mukminin</h2>
           <p>Mahasiswa · STMM Yogyakarta</p>
         </aside>
@@ -149,10 +297,12 @@
       <div class="wrap">
         <div class="section-label">About me</div>
         <h2 class="section-title">Sedikit tentang diriku</h2>
+
         <div class="about-grid">
           <div class="about-copy">
             <p>Halo! Aku Tutur Mukminin, biasa dipanggil Mukminin. Aku berasal dari Kalimantan Timur dan saat ini sedang menempuh pendidikan di Sekolah Tinggi Multi Media (STMM) Yogyakarta. Aku senang menikmati hal-hal sederhana, mencoba pengalaman baru, dan mengisi waktu luang dengan berbagai kegiatan yang kusukai.</p>
           </div>
+
           <div class="info-card">
             <div class="info-list">
               <div class="info-row"><span>Nama</span><strong>Tutur Mukminin</strong></div>
@@ -171,47 +321,49 @@
       <div class="wrap">
         <div class="section-label">My interests</div>
         <h2 class="section-title">Hal yang aku sukai</h2>
+
         <div class="interest-grid">
           <article class="interest-card">
             <div class="interest-icon">🎧</div>
             <h3>Mendengarkan Musik</h3>
             <p>Terutama musik upbeat yang energik dan bisa membangkitkan semangat.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">🎬</div>
             <h3>Film &amp; Serial</h3>
             <p>Menonton film atau serial menjadi salah satu pilihan untuk menikmati waktu luang.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">🛵</div>
             <h3>Jalan-Jalan</h3>
             <p>Suka berkeliling dan menjelajahi sudut-sudut Kota Yogyakarta saat senggang.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">🎺</div>
             <h3>Musik &amp; Instrumen</h3>
             <p>Tertarik memainkan alat musik dan mengikuti kegiatan marching band di kampus.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">💡</div>
             <h3>Teknologi &amp; Informasi</h3>
             <p>Tertarik mempelajari perkembangan informasi dan dunia digital.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">🌆</div>
             <h3>Eksplorasi Kota</h3>
             <p>Menikmati suasana kota, perjalanan santai, dan menemukan tempat-tempat baru.</p>
           </article>
+
           <article class="interest-card">
             <div class="interest-icon">🎞️</div>
             <h3>Editing Video</h3>
-            <p> Aku suka mengedit video, terutama
-              bereksperimen dengan berbagai transisi,
-              TCC, dan mengolah potongan video agar
-              terlihat lebih menarik dan estetik.
-    </p>
-</article>
-
+            <p>Aku suka mengedit video, terutama bereksperimen dengan berbagai transisi, TCC, dan mengolah potongan video agar terlihat lebih menarik dan estetik.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -220,6 +372,7 @@
       <div class="wrap">
         <div class="section-label">Get in touch</div>
         <h2 class="section-title">Terhubung denganku</h2>
+
         <div class="contact-card">
           <div>
             <h3 style="margin:0;color:var(--navy)">Mari saling terhubung.</h3>
